@@ -16,13 +16,9 @@ public class Game {
     }
 
     public Player pickWinner(){
-        Player winner = new Player();
+        Player winner = players.get(0);
 
         for(Player player : players){
-
-            if(winner.handSize() == 0){
-                winner = player;
-            }
 
             if(player.returnCardRank() > winner.returnCardRank()){
                 winner = player;
